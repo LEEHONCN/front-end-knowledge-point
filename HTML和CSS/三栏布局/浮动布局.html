@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center"></div>
+</body>
+</html>
+
+
+<style>
+    body, html{
+        height: 100%;
+    }
+    .left{
+        float: left;
+        width: 200px;
+        height: 100%;
+        background-color: red;
+    }
+
+    .right{
+        float: right;
+        width: 150px;
+        height: 100%;
+        background-color: blue;
+    }
+
+    .center{
+        height: 100%;
+        background-color: green;
+    }
+
+
+</style>
+浮动布局需要先写浮动部部分，如果按照常理左中右这样放置的话，右侧部分会掉到下边去。
+浮动元素会脱离文档流，需要清除浮动。
+主要内容模块无法最先加载。

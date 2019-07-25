@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="container">
+        <div class="center"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
+
+<style>
+    body, html{
+        height: 100%;
+    }
+
+    .container {
+        overflow: hidden;
+        height: 100%;
+        padding: 0 150px 0 200px;
+    }
+    .container > div {
+        position: relative;
+        float: left;
+        height: 100%;
+    }
+    .center {
+        width: 100%;
+        background-color: red;
+    }
+    .left {
+        width: 200px;
+        background-color: green;
+        margin-left: -100%;
+        left: -200px;
+    }
+    .right {
+        width: 150px;
+        background-color: blue;
+        margin-left: -150px;
+        right: -150px;
+    }
+
+</style>
