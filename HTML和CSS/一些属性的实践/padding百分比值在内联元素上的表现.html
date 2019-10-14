@@ -4,35 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title> padding与内联元素 </title>
     <style>
         .box {
             width: 100px;
-        }
-        .zheng {
-            box-sizing: content-box;
-            padding: 50%;
-            background-color: #cd0000
-        }
-        /* .box{
+            height: 100px;
             border: 2px dashed #cd0000;
-        } */
+        }
         span {
             padding: 50%;
-            background-color: gray;
-            font-size: 0;   
+            background-color: teal;
+            /* font-size: 0;    */
         }
     </style>
 </head>
 <body>
-    <div class="box">
+    <div class="box" style="float:left;">
+        <span>padding会使内联元素发生断行</span>
+    </div>
+
+    <div class="box" style="float:right;">
         <span></span>
     </div>
-    <!-- <div class="zheng"></div> -->
-    <!-- <div class="box">
-        <span></span>    
+    <div>
+        对于内联元素，其padding区域跟随行框盒子区域。 <br>
+        padding会使空白幽灵节点生效
     </div>
-     -->
 </body>
 </html>
-<!-- 在这个例子中 -->

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    span{
+      margin: 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <span id="day"></span>
+  <span id="hour"></span>
+  <span id="minutes"></span>
+  <span id="second"></span>
+</body>
+</html>
+<script>
+
+
+function TransTimer(timestamp){
+    this.timestamp = timestamp;
+    this.timeObj = {
+      day: 1000 * 60 * 60 * 24,
+      hour: 1000 * 60 * 60,
+      minutes: 1000 * 60,
+      second: 1000
+    };
+  }
+
+TransTimer.prototype.getResult = function() {
+    Object.keys(this.timeObj).forEach(function(timeName){
+      if (this.timestamp >= this.timeObj[timeName]) {
+        var targetTime = this.timeObj[timeName];
+        this.timeObj[timeName] = Math.floor(this.timestamp / targetTime);
+        this.timestamp %= targetTime;
+      } else {
+        this.timeObj[timeName] = 0;
+      }
+    }.bind(this));
+    return this.timeObj;
+  };
+
+  var targetTime = new Date(2019, 9, 25, 9, 35).getTime();
+  setInterval(function(){
+    var timestamp = targetTime - new Date().getTime();
+    var obj = new TransTimer(timestamp).getResult();
+    document.getElementById('day').innerText = obj.day < 10 ? `0${obj.day}` : obj.day;
+    document.getElementById('hour').innerText = obj.hour < 10 ? `0${obj.hour}` : obj.hour;
+    document.getElementById('minutes').innerText = obj.minutes < 10 ? `0${obj.minutes}` : obj.minutes;
+    document.getElementById('second').innerText = obj.second < 10 ? `0${obj.second}` : obj.second;
+  }, 1000);
+    
+</script>
