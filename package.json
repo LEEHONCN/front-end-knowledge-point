@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "immutability-helper": "^3.0.1",
+    "immutable": "^4.0.0-rc.12",
+    "moment": "^2.24.0"
+  }
+}

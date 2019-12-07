@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+    .section {
+      height: 100px;
+      white-space: nowrap; 
+      font-size: 0;  
+    }
+    .inner {
+      display: inline-block;
+      width: 50%;
+      height: 100%;
+      background-color: cyan;
+    }
+    .section:nth-child(odd) .inner:first-child {
+      float: right;
+      background-color:darkblue;
+    }
+    .section:nth-child(even) .inner:first-child {
+      background-color:darkblue;
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="inner"></div>
+    <div class="inner"></div>
+  </section>
+  <section class="section">
+    <div class="inner"></div>
+    <div class="inner"></div>
+  </section>
+  <section class="section">
+    <div class="inner"></div>
+    <div class="inner"></div>
+  </section>
+  <section class="section">
+    <div class="inner"></div>
+    <div class="inner"></div>
+  </section>
+  <div>
+    该布局可以实现错位布局易于维护。
+</body>
+</html>
