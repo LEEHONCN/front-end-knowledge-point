@@ -1,0 +1,7 @@
+
+class Promise {
+    then(){
+
+    }
+    cac
+}
