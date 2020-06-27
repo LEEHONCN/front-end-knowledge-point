@@ -1,0 +1,12 @@
+{
+  "name": "puppeteer-learn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^3.0.0"
+  }
+}
