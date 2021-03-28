@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body, html{
+      height: 100%;
+    }
+    .container{
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 10px;
+    }
+    /* .container > div {
+      margin: 5px;
+    } */
+    .zero {
+      grid-column-start: span 0;
+    }
+    .one {
+      grid-column-start: span 1;
+      background-color: aliceblue;
+    }
+    .two {
+      grid-column-start: span 2;
+      background-color: antiquewhite;
+    }
+    .three {
+      grid-column-start: span 3;
+      background-color: aqua;
+    }
+    .four {
+      grid-column-start: span 4;
+      background-color: blueviolet;
+    }
+    .five {
+      grid-column-start: span 5;
+      background-color: chocolate;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+    <div class="five container">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+      <div class="four"></div>
+    </div>
+  </div>
+</body>
+</html>
